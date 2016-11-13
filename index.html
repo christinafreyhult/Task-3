@@ -6,7 +6,7 @@
     <title>Registration form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,900" rel="stylesheet">
 </head>
     
 <body>
@@ -27,32 +27,33 @@
 
             <div class="input_line">
                 <label for="name">Full Name</label>
-                <input type="text" id="name">
+                <input type="text" id="name" placeholder="Required">
             </div>
 
             <div class="input_line">    
                 <label for="email">Email Address</label>
-                <input type="email" id="email">
+                <input type="email" id="email" placeholder="Required">
             </div>
 
             <div class="input_line">
                 <label for="tel">Phone Number</label>
-                <input type="tel" id="tel">
+                <input type="tel" id="tel" placeholder="Ex: 555-5555">
             </div>
             
             <div class="input_line">
                 <label for="address">Street Address</label>
-                <input type="text" id="address">
+                <input type="text" id="address" placeholder="Ex: Main Street 100">
             </div>
 
             <div class="input_line">
                 <label for="city">City</label>
-                <input type="text" id="city">
+                <input type="text" id="city" placeholder="Ex: Gotham city">
             </div>
                 
             <div class="input_line">
                 <label for="state">State</label>
                 <select id="state">
+                    <option>Choose state</option>
                     <option>State A</option>
                     <option>State B</option>
                     <option>State C</option>
@@ -71,22 +72,56 @@
             <ledgend>Newsletter</ledgend>
             
             <label>Select the newsletters you would like to receive</label>
-            <input type="checkbox" id="html_news"><label for="html_news">HTML News</label><br>
-            <input type="checkbox" id="css_news"><label for="css_news">CSS News</label><br>
-            <input type="checkbox" id="javascript_news"><label for="javascript_news">Javascript News</label><br>
-                        
-            <label>Newsletter format</label>
-            <input type="radio" id="html_format" name="newsletter"><label for="html_format">HTML</label><br>
-            <input type="radio" id="plain_format" name="newsletter"><label for="plain_format">Plain text</label><br>
             
-            <label for="other">Other topics you'd like to hear about</label>
-            <textarea id="other"></textarea>
+            <div class="input_line">
+                <input type="checkbox" id="html_news"><label for="html_news">HTML News</label><br>
+            </div>
+            
+            <div class="input_line">
+                <input type="checkbox" id="css_news"><label for="css_news">CSS News</label><br>
+            </div>
+            
+            <div class="input_line">
+                <input type="checkbox" id="javascript_news"><label for="javascript_news">Javascript News</label><br>
+            </div>
+            
+            <label id="newsletter_format">Newsletter format</label>
+            
+            <div class="input_line">
+                <input type="radio" id="html_format" name="newsletter"><label for="html_format">HTML</label><br>
+            </div>
+            
+            <div class="input_line">
+                <input type="radio" id="plain_format" name="newsletter"><label for="plain_format">Plain text</label><br>
+            </div>
 
+            <label id="news_size">Newsletter size</label>
+            
+            <div class="input_line">
+                <input type="radio" id="size_small" name="size"><label for="size_small">Small</label><br>
+            </div>
+            
+            <div class="input_line">
+                <input type="radio" id="size_medium" name="size"><label for="size_medium">Medium</label><br>
+            </div>
+            
+            <div class="input_line">
+                <input type="radio" id="size_large" name="size"><label for="size_large">Large</label><br>
+            </div>
+
+            
+            <div class="input_line">
+                <label for="other">Other topics you'd like to hear about</label>
+                <textarea id="other" placeholder="Vector graphics and more..."></textarea>
+            </div>
+            
+            <button>Sign Up</button>
+        
+            <p>Copyright The Code Review</p>
+            
         </fieldset>
+
         
-        <button>Sign Up</button>
-        
-        <p>Copyright The Code Review</p>
     </form>
 
     

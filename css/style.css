@@ -9,15 +9,11 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Merriweather', serif;
-  background: #f7f5f0;
 }
 
-/*----Style the header----*/
 
-.header {
-    height: 100px;
-    background: #2e2e38;
-}
+
+/*----Style the fonts----*/
 
 h1 {
     color: white;
@@ -33,6 +29,20 @@ h2 {
 
 p {
     color: grey;
+    line-height: 1.5;
+}
+
+label {
+    color: gray;
+    line-height: 1.5;
+}
+
+
+/*----Style the header----*/
+
+.header {
+    height: 100px;
+    background: #2e2e38;
 }
 
 .header_text {
@@ -41,12 +51,24 @@ p {
     margin-bottom: 20px;
 }
 
+
+
 /*----Style the form----*/
 
+.contact_info,
+.newsletter {
+    margin: auto 20px;
+    padding: 20px 0;
+}
+
+.contact_info {
+    border-bottom: solid;
+}
 
 ledgend {
     display: block;
     text-align: left;
+    font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -54,34 +76,186 @@ ledgend {
 .input_line {
     display: block;
     padding: 10px 0;
-    text-align: left
+    text-align: left;
 }
 
-label {
-    color: gray;
-}
-
-.contact_info {
-    margin: auto 20px;
-    border-bottom: solid;
-}
-
-.newletter {
-     margin: auto 20px;
-}
-
-
-
-
-
-
-/*----Media query
-
-@media(min-width:720) {
- 
-    .contact_info label {
+.contact_info label {
     display: inline-block;
-    width: 150px;
+    margin: 12px 0;
 }
-----*/    
+
+.contact_info input,
+.contact_info select {
+    background: #efefef;
+    width: 100%;
+    height: 65px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+    transition: background 1s;
+}
+
+#zip {
+    width: 50%;
+    display: block;
+}
+
+select {
+    color: lightgrey;
+}
+
+.newsletter {
+    text-align: left;
+}
+
+
+/*----Style the checkboxes----*/
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: solid 3px #efefef;
+    border-radius: 5px;
+    margin: 3px 10px 3px 0;
+    background: #efefef;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label:before {
+    border: solid 2px #2e2e38;
+    content: "\2713";
+    color: #2e2e38;
+    font-size: .9em;
+    width: 15px;
+	height: 15px;
+    text-align: center;
+    line-height: 1.1em;
+}
+
+
+
+/*----Style the radiobuttons----*/
+
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin: 3px 10px 3px 0;
+    border: solid 3px #efefef;
+    border-radius: 10px;
+    background: #efefef;
+}
+
+input[type="radio"]:checked + label:before {
+    border: solid 5px #efefef;
+    content: "";
+    width: 10px;
+	height: 10px;
+    background: #2e2e38;
+}
+
+#newsletter_format,
+#news_size {
+    display: block;
+    margin: 20px 0 5px;
+}
+
+
+#other {
+    margin-top: 20px;
+    background: #efefef;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: none; 
+}
+
+input:focus,
+select:focus,
+#other:focus {
+    border: solid 2px #2e2e38;
+    transition: background 1s;
+    background: white;
+}
+
+
+::-webkit-input-placeholder {
+    text-align: right;
+    font-style: italic;
+    color: lightgrey;
+    padding-right: 20px;
+}
+
+#other::-webkit-input-placeholder {
+    text-align: left;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: palevioletred;
+    color: #2e2e38;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.newsletter p {
+    text-align: center;
+    font-style: italic;
+    color: lightgrey;
+}
+
+
+/*----Media query----*/   
+
+@media(min-width: 720px) {
+    
+    .header_text,
+    .contact_info,
+    .newsletter {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+     .contact_info label {
+         width: 25%;
+    }
+    
+    .contact_info input,
+    .contact_info select {
+        width: 74%;
+    }
+    
+    #zip {
+        display: inline;
+        width: 30%;
+    }
+}
+
+@media(min-width: 1200px) {
+ 
+    .header_text,
+    .contact_info,
+    .newsletter {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
