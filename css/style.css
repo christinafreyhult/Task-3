@@ -55,6 +55,10 @@ label {
 
 /*----Style the form----*/
 
+fieldset {
+    border: none;
+}
+
 .contact_info,
 .newsletter {
     margin: auto 20px;
