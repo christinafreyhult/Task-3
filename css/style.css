@@ -173,12 +173,6 @@ input[type="radio"]:checked + label:before {
     background: #2e2e38;
 }
 
-#newsletter_format,
-#news_size {
-    display: block;
-    margin: 20px 0 5px;
-}
-
 
 #other {
     margin-top: 20px;
@@ -194,7 +188,7 @@ select:focus,
 #other:focus {
     border: solid 2px #2e2e38;
     transition: background 1s;
-    background: white;
+    background: palevioletred;
 }
 
 
